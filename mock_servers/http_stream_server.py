@@ -7,7 +7,7 @@ app = Flask(__name__)
 
 
 def generate_events():
-    for i in range(1000):
+    for i in range(10):
         event = {
             "event_id": i,
             "type": "PLAYBACK_METRIC",
