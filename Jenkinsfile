@@ -5,7 +5,7 @@ pipeline {
         stage('Start HTTP Stream Server') {
             steps {
                 sh '''
-                nohup python mock_servers/http_stream_server.py > server.log 2>&1 &
+                python mock_servers/http_stream_server.py
                 '''
             }
         }
