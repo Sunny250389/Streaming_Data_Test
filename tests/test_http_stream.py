@@ -13,3 +13,7 @@ def test_http_stream(http_stream_server):
     for event in events:
         validate_schema(event, ["event_id", "type", "timestamp", "bitrate"])
         validate_playback_event(event)
+
+
+def test_pass():
+    assert 0 == 0

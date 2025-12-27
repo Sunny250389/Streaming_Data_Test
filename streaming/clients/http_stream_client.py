@@ -6,7 +6,7 @@ class HTTPStreamClient:
     def __init__(self, url):
         self.url = url
 
-    def consume(self, max_events=10):
+    def consume(self, max_events=1000):
         response = requests.get(self.url, stream=True, timeout=10)
         response.raise_for_status()
 
