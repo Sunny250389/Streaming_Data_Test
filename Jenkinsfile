@@ -55,7 +55,7 @@ pipeline {
             steps {
                 bat '''
                 call %VENV_DIR%\\Scripts\\activate
-                pytest mock_servers\\http_stream_server.py
+                pytest tests\\test_http_stream.py
                 '''
             }
         }
