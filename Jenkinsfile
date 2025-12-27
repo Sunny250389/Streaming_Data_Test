@@ -47,7 +47,7 @@ pipeline {
 
         stage('Wait for Server') {
             steps {
-                bat 'timeout /T 5'
+                bat 'ping 127.0.0.1 -n 6 > nul'
             }
         }
 
@@ -66,12 +66,5 @@ pipeline {
             echo 'Cleaning up background processes'
             bat 'taskkill /IM python.exe /F || exit 0'
         }
-        failure {
-            echo 'Build failed'
-        }
-        success {
-            echo 'Build succeeded'
-        }
     }
 }
-
